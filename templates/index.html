@@ -1,0 +1,144 @@
+{% extends 'base.html' %} 
+{% load static %}
+{%block body%}
+<!-- sliderstart-->
+<section class="slider">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+ <!-- carousoul -->
+
+   <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+
+      <ol class="carousel-indicators cid">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+
+
+  <div class="carousel-inner">
+    <!-- item -->
+    <div class="carousel-item active">
+    <div class="row">
+        <div class="col-md-5">
+        <div class="s-content">
+          <h1>Get Excellent & Unlimited Browsing</h1>
+          <h2>Hello good people! we provide the fastest Internet Service in Bangladesh 24/7 and 365 days. We look forward to helping you with our services. </h2>
+          <ul class="list-inline apple">
+            <li class="list-inline-item"><i class="fab fa-apple"></i></li>
+            <li class="list-inline-item"><i class="fab fa-android"></i></li>
+            <li class="list-inline-item"><i class="fab fa-windows"></i></li>
+          </ul>
+        </div>
+      </div>
+      <div class=" offset-md-2 col-md-5 d-md-block d-none">
+      <div class="s-img">
+      <img src="{% static 'img/isp1.jpg' %}" class="img-fluid">
+      </div>
+      </div>
+    </div>
+    </div>
+    <!-- item -->
+     <!-- item -->
+    <div class="carousel-item ">
+    <div class="row">
+        <div class="col-md-5">
+        <div class="s-content">
+          <h1>Unlimited Internet</h1>
+          <h2>We provide unlimited data bandwidth for unlimited web browsing experience and also our flawless connectivity helps with stable download and upload speed all the time.</h2>
+          <p># 24 Hrs Same Speed  # Higher Upload Speed   # Guaranteed Uptime</p>
+          <ul class="list-inline apple">
+            <li class="list-inline-item"><i class="fab fa-apple"></i></li>
+            <li class="list-inline-item"><i class="fab fa-android"></i></li>
+            <li class="list-inline-item"><i class="fab fa-windows"></i></li>
+          </ul>
+        </div>
+      </div>
+      <div class=" offset-md-2 col-md-5 d-md-block d-none">
+      <div class="s-img ">
+      <img src="{%static 'img/isp2.jpg' %}" class="img-fluid">
+      </div>
+      </div>
+    </div>
+    </div>
+    <!-- item -->
+     <!-- item -->
+    <div class="carousel-item ">
+    <div class="row">
+        <div class="col-md-5">
+        <div class="s-content">
+          <h1>24/7 Support and Smart Payment Method</h1>
+          <h2>We have the best support team you can have. We are ready 24/7 to support with any kind of connectivity or user issues at any cost. We we also came with smart payment method for user comfort.</h2>
+          <p># Redundant connection ensure that You never go offline   # Our Expart Support all time ready for you   # Payment method - Bkash, Nogod, DBBL, etc. </p>
+          <ul class="list-inline apple">
+            <li class="list-inline-item"><i class="fab fa-apple"></i></li>
+            <li class="list-inline-item"><i class="fab fa-android"></i></li>
+            <li class="list-inline-item"><i class="fab fa-windows"></i></li>
+          </ul>
+        </div>
+      </div>
+      <div class=" offset-md-2 col-md-5 d-md-block d-none">
+      <div class="s-img">
+      <img src="{% static 'img/isp3.jpg'%}" class="img-fluid">
+      </div>
+      </div>
+    </div>
+    </div>
+    <!-- item -->
+
+  </div>
+</div>
+<!-- carousoul end-->
+      </div>
+    </div>
+  </div>
+</section>
+<!-- sliderend-->
+<!-- secondstart -->
+<div class="feature">
+  <div class="container">
+    <!-- istrow -->
+    <div class="row">
+      <div class=" offset-md-1 col-md-10">
+        <div class="c-title text-center">
+          <h1 class="c-h1">Rifat Party Zone Services </h1>
+          <p class="c-p">Here are the services that our company is providing </p>
+        </div>
+      </div>
+    </div>
+    <!-- 2ndrow -->
+   <div class="row">    
+   <!-- singleitem -->
+   {% for i in data %}
+     <div class="col-lg-4 col-sm-6">
+       <div class="single">
+         <div class="row">
+           <div class="col-md-3">
+             <div class="s-img">
+               <i class="fab fa-android text-center andr"></i>
+             </div>
+           </div>
+           <div class="col-md-9">
+             <div class="s-text">
+               <h2>{{i.title}}</h2>
+               <p>{{i.price}}</p>
+               <p>{{i.speed}}</p>
+               <p>{{i.ftp}}</p>
+               <p>{{i.description}}</p>
+               <a href = "{% url 'C_Request' %}"> <button class="btn success">Buy now </button></a>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+     {% endfor %}
+    
+
+
+   </div>
+ </div>
+</div>
+<!-- secondend -->
+
+{%endblock%}

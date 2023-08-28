@@ -1,0 +1,170 @@
+
+/*font-family: 'PT Sans', sans-serif;*/
+body{
+	font-family: 'PT Sans', sans-serif;
+	color:#000000;
+
+}
+/*header start*/
+header{
+	padding: 1px;
+    background-color: #000000;
+}
+.menu ul li a{
+	font-weight: 700;
+	font-size: 22px;
+	color:#ffffff !important;
+	padding: 0 40px !important;
+	transition: .5s;
+}
+.menu ul li a:hover{
+	color: #fff !important;
+}
+.menu ul li :lastchild a{
+	padding-right: 0 !important;
+}
+/*headerend*/
+/*slider*/
+.slider{
+	background-color: #f7f7db;
+	padding-bottom: 100px;
+}
+.s-content{
+	padding-top: 70px;
+}
+.s-content h1{
+    font-weight: 700;
+    color: #721414;
+    margin-bottom: 21px;
+    font-size: 32px;
+}
+.s-content h2{
+	font-weight: 400;
+    color: #313841;
+    font-size: 20px;
+    word-spacing: 1px;
+    letter-spacing: 1px;
+     margin-bottom: 18px;
+
+
+}
+.s-content p{
+	font-weight: 400;
+    color: #555555;
+    font-size: 14px;
+    word-spacing: 1px;
+    margin-bottom: 33px;
+
+}
+.apple li{
+	font-size:42px;
+	margin-right: 30px !important;
+}
+
+.s-img{}
+.s-img img{}
+.cid {
+    bottom: -60px;
+}
+
+.cid li {
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+}
+.cid .active {
+    background-color: black;
+}
+/*feature*/
+.feature{
+	padding-top:90px;
+	padding-bottom:100px;
+
+
+}
+.c-title{
+	margin-top: 20px;
+	margin-bottom: 70px;	
+}
+.c-h1{
+	text-align: center;
+	font-size: 32px;
+	font-weight: 700;
+}
+.c-p{
+	color: #313841;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/*inner*/
+.single{}
+.s-img{}
+.andr{
+	font-size: 50px;
+	font-family: 400;
+}
+.s-text h2{
+	font-size: 22px;
+	font-weight: 400;
+	margin-bottom: 17px;
+}
+.s-text p{
+	font-size: 16px;
+	color: #898989;
+}
+
+/*inner*/
+/*feature*/
+/*endpartstart*/
+.contact {
+	background-color: #010101;
+	padding-top:90px;
+	padding-bottom:100px;
+}
+.yellow{
+	color: #fcdb00;
+}
+.ash{
+	color: #898989;
+}
+form{
+	margin-bottom: 75px;
+}
+.email-form{
+	height: 50px;
+	font-size: 16px;
+	color: #898989;
+	font-weight: 400;
+}
+.btn-form{
+	height: 50px;
+	font-weight: 400;
+	font-size: 16px;
+	color: #010101;
+	background-color: #fcdb00;
+	border: none;
+}
+.icon{
+	text-align: center;
+	    margin-bottom: 126px;
+}
+.fb{
+	background-color: #fcdb00;
+	font-weight: 400;
+	font-size: 42px;
+	color: black;
+	border-radius: 3px;
+	margin: 0 15px;
+}
+.cont{
+	    color: #ffffff;
+    padding-top: 100px;
+    list-style: none;
+    padding: 0 0px;
+    margin-right: -37px;
+}
+/*endpartend*/

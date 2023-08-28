@@ -1,0 +1,192 @@
+
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--fonts-->
+   <link rel="stylesheet" href="fontawesome/css/all.css">
+   <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/media.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+   
+
+    <title>RIFAT PARTY ZONE</title>
+  </head>
+  <body>
+
+
+    <!--header-->
+    <header>
+      <!--logo-->
+
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light ">
+          <a class="navbar-brand" href="{% url 'isp_home' %}"><img src="{% static 'img/rifat.png' %}" class="img-fluid"></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!--logo end-->
+
+          <!--menu-->
+          <div class="collapse navbar-collapse menu" id="navbarSupportedContent">
+
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="{% url 'isp_home' %}">Home<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                {% comment %} <a class="nav-link" href = "{% url 'package_view' %}"> Packages</a> {% endcomment %}
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'suport_request' %}">Support</a>
+              </li>
+              {% if user.is_authenticated %}
+                <li class="nav-item">
+                  <a class="nav-link" href={% url 'logout' %}>logout</a>
+                </li> 
+                <li class="nav-item">
+                  <a class="nav-link" href={% url 'profile' %}>profile</a>
+                </li> 
+              {% else %}
+                <li class="nav-item">
+                  <a class="nav-link" href={% url 'login' %}>login </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href={% url 'register' %}>register </a>
+                </li>
+              {%endif%}
+
+          </div>
+          <!--menu end-->
+        </nav>
+      </div>
+    </header>
+    <!--headerend-->
+
+
+
+
+
+{%block body%}
+
+{%endblock%}
+
+
+<!-- contactstart -->
+<section class="contact">
+    <div class="container">
+      <!-- istrow -->
+         <div class="row">
+        <div class=" offset-md-1 col-md-10">
+          <div class="c-title  text-center">
+            <h1 class="c-h1 yellow">Keep in touch with us</h1>
+            <p class="c-p ash">Thank You for visiting our website. Wish you a good day. For any quaries and for comunicate us, please enter your mail address below :</p>
+          </div>
+        </div>
+      </div>
+     <!-- istrowend -->
+     <!-- secondrow  -->
+     <div class="row justify-content-center">
+    <div class="offset-md-1 col-md-10">
+       <form>
+    <div class="row ">
+      <div class="col-md-9 col-md-9">
+        <input type="email" class="form-control email-form" placeholder="Enter your email here">
+      </div>
+      <div class="col-lg-2 col-md-3">
+        <input type="submit" class="form-control btn-form" value="submit" >
+      </div>
+    </div>
+  </form>
+    </div>   
+     </div>
+     <!-- secondrowend  -->
+    <div class="icon">
+     <ul class="list-inline">
+       <li class="list-inline-item">
+        <a href="#">
+         <i class="fab fa-facebook-f fb "></i>
+        </a>
+       </li>
+       <li class="list-inline-item">
+        <a href="#">
+         <i class="fab fa-twitter fb"></i>
+        </a>
+       </li>
+       <li class="list-inline-item">
+        <a href="#">
+         <i class="fab fa-google-plus-g fb"></i>
+        </a>
+       </li>
+       <li class="list-inline-item">
+        <a href="#">
+        <i class="fab fa-python fb"></i>
+        </a>
+       </li>
+     </ul>
+    </div>
+    <div class="row justify-content-center container-fluid">
+   
+      <div class="col-sm-3 container-fluid">
+        <ul class="cont">
+          <li>Rifat Party Zone LTD</li>
+          <li>1B/9 Zoras Centre,Gulshn-1 </li>
+          <li>Dhaka, Bangladesh</li>
+          <li>rpz@gmail.com</li>
+          <li>+880 122334455</li>
+        </ul>
+      </div>
+      <div class="col-sm-1 container-fluid">
+        <ul class="cont">
+          <li>Branches</li>
+          <li>Locations on Map</li>
+          <li>License</li>
+        </ul>
+      </div>
+      <div class="col-sm-1 container-fluid">
+        <ul class="cont">
+          <li>Contact</li>
+          <li> About</li>
+          <li>Privacy</li>
+          <li>Terms</li>
+        </ul>
+      </div>
+      <div class="col-sm-1 container-fluid">
+        <ul class="cont">
+          <li>Download</li>
+          <li> Support</li>
+          <li>Documents</li>
+        </ul>
+      </div>
+      <div class="col-sm-1 container-fluid">
+        <ul class="cont">
+          <li>Media</li>
+          <li> Blog</li>
+          <li>Forums</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  </section>
+  <!-- contactend-->
+  
+  
+  
+  
+      <!-- Optional JavaScript -->
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+      <script src="{% static 'js/bootstrap.min.js'%}"></script>
+      <script src="js/"></script>
+    
+  
+    </body>
+  </html>
+  

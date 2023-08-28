@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{%block body%}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header">
+            <h4 class="mb-0">Login </h4>
+          </div>
+          <div class="card-body">
+        <form method = "POST">
+            {% csrf_token %}
+            {% for field in form %}
+            <div class = "form-group">
+                {{ field.name }}
+                {{ field }}
+            </div>
+            {% endfor %}
+        <div class="col-lg-3 col-md-3">
+        <input type="submit" class="form-control btn-form" value="Login " style="margin-top = 70px !importent;" >
+        </div>
+        </form>
+    </div>
+</div>
+</div>
+</div>
+</div>
+{%endblock%}
